@@ -1,0 +1,101 @@
+Project: P*DA ZX -- Pokemon Data Assistant ZX
+Current Maintainer: Katrina "the Lamia" Payne AKA Full Metal Harlot
+
+Target starting date of work: Novembre 3rd 2009
+
+Synopis:
+
+WHY?!?!?! WHY?!?!? Why is everything centred around pokemon development 
+complete and total tripe? Either it relies on some glitchy libraries that are 
+no longer supported on their OSes (such as Pokemon Net Battle) or are written 
+poorly in some horrid language that no sane game developer should be using in 
+the first place (such as Java compiled to the JVM (as oppose to Java compiled 
+to a target machine like ARM, ix86, ia64, etc || some sane looking language 
+compiled into the JVM) or *shudder*--VB.Net)
+
+This project is to create a platform independant framework of code, written in 
+C++ (so that the source itself is platform independant--to make porting 
+easier), that is sanely written to create applications that serve in the 
+realm of Pokemon.
+
+Such examples of these may be:
+ * Team Builder Application
+ * Pokedex Application
+ * Evolution AI research on Pokemon strategies
+ * PRNG help tools.
+ * Battle simulators
+ * Fan versions of the Pokemon games.
+ * Possibly a Pokemon MMORPG of some sort
+
+The idea would be to do decent code that is not subject to security issues on 
+the merit of the code alone. The code should also be clean, consistant and 
+fast--programmed in the manner that a Comp Sci Professor would do it, rather 
+than a High School CS student (which a lot of Pokemon Apps tend to come 
+across as looking like--including your stuff, Game Freak)
+
+LEGAL NOTE/DISCLAIMER
+
+To keep issues from arising about Pokemon Intellectual Property, as we go 
+through this project, we will largely be using our own Intellectual Property.
+Pokemon itself is a Trademark of Nintendo of X Region. Though, the code we 
+will use will be independantly implimented by us--using no actual Nintendo 
+code. The artwork will be implimented by us, and the sounds and music will be 
+made by us--or taken from public domain works.
+
+Any copy entries in the application that appear, such as Pokedex text, will 
+have their source listed in an easy to find manner.
+
+This framework has no intention of hurting Pokemon sales, and will not attempt 
+to claim to be an official work of Nintendo, or be in anyway a reflection of 
+the thoughts and opinions of Nintendo, Game Freak, Creatures Inc or the 
+Pokemon Company entities.
+
+Any money made on this application, will pay for the work _we_ put into it, 
+and generally will not have much of any intellectual property that we cannot 
+use. In the case the Pokemon Trademark is displayed in the sales made with 
+this framework, it will be only in instances where that use of the framework 
+reflects some form of educational or satire usage. As allowed in accordance 
+to Fair Use.
+
+This framework will be distributed in a FlOSS manner. Noting that in some 
+cases FlOSS may not in actuality indicate "Free Beer" so much as Free Speech.
+
+I expect any complaints on this matter be fully read on the Intellectual 
+Property Laws of USA and Canada, including but not limited to:
+
+ * Fair use for the purpose of education
+ * Fair use for the purpose of satire
+ * The definition of Software Properties (Canada only)
+ * The definition of a Patent
+ * How a Patent may be reimplimented without breaking the Law
+ * The definition of what exactly is a Trademark.
+ * The definition of what exactly is a Copyright.
+ * How exactly a Trademark is never a Copyright of any kind (and thus a 
+   seperate definition)
+ * The entries that Nintendo has took the effort to actually register in the 
+   various Trademark databases, as oppose to imaginary ones that various fans 
+   dream up about, when topics like this come up.
+
+It should be noted that this will never be sold with the name "Pokemon", 
+except for a few cases where it can be directly shown that the case is used 
+for education or parody. We of course, are including in our definitions of 
+selling as including various forms of advertisements in it (for example: 
+google advertisements or banner advertisments on sites depicting this stuff) 
+or otherwise having some manner of monitary gain created as a result of using 
+this sort of product. We are fully aware that if we get a form of monitary 
+gain for any time a user makes a request to see this stuff (regardless of 
+where that money comes from, it need not be directly from the person), then 
+we could be shown as being in direct violation of said Intellectual Property.
+
+TODO:
+20081008
+ * Finish Specs on this
+ * Make a proper TODO file
+ * Make a proper Changelog.txt file
+
+Changelog
+20081008
+ * Started project on GitHub
+ * Created README file
+ * Wrote long legal disclaimer noting that we at least think we fully know 
+   the law on this.
