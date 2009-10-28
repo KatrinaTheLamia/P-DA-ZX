@@ -1,0 +1,28 @@
+
+Directory $PDAZX/Source/Data/Libraries
+
+This directory is mostly related to modification of Nintendo games, or 
+in some cases, grabbing information from those games. The main point of 
+this section is to include enough informations to allow for P*DA ZX to 
+operate as a disassembler/assembler type setup for the targetted systems,
+but to also contain the information on where certain functions are in the 
+various games it is based on.
+
+The idea being that this section of code can grab various functions from 
+the game's information and put it into a more local spot to deal with. It 
+will also allow us to add information into the game.
+
+It should be noted that music and graphics can be considered RAW scrips in 
+the format this code allows for.
+
+For now, we will simply list the data in this section as a blob associated 
+with the system it is on.
+
+So we could have for types:
+RaddTeam::PDAZX::Blob::Z80
+RaddTeam::PDAZX::Blob::m6802
+RaddTeam::PDAZX::Blob::MIPS
+RaddTeam::PDAZX::Blob::ARM
+RaddTeam::PDAZX::Blob::PPC
+
+Holder entries for DC have been given for future usages.

@@ -1,0 +1,12 @@
+
+Directory: $PDAZX/Source/CPU_NFO
+
+This section is mostly for dealing with dynamic disassembling and 
+reassembling within PDA ZX. The idea here is that to better edit a 
+program, it helps if you can edit the scripts in the source on the 
+fly.
+
+This is mostly for additional help gained via ASM in the game. There 
+will be a seperate tool for dealing with scripts and functions that 
+are provided by the various Pokemon games.
+

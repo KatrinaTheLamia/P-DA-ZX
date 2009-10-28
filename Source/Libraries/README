@@ -1,0 +1,27 @@
+
+Direction $PDAZX/Libaries
+
+Right now, not much is here. Generally we have two portions for this section
+one is a pointer table. This makes things a lot easier to deal with, as well, 
+we can now more dynamically resize the scripts we are running. This would 
+allow us to keep track of all the pointers we are using in the current 
+session of PDA ZX, and if we have changed them within PDA ZX, simply modify 
+the ROM itself.
+
+Say we took a script, and expanded the amount of instructions in it by four. 
+This would cause an issue of having to instead make a new script at the end 
+of the ROM. Here what we do, is keep track of all the pointers in our current 
+game Modding session, and when we need to expand a function, update where the 
+new pointer locations are--then anything we have noted as talking to that 
+pointer location, tell it the new place to point.
+
+It should be noted that scripts can only be expanded as far as the databank 
+will allow them to.
+
+The other part is an object designed mostly to allow the user of PDA ZX to 
+tell the database where certain libraries of data are in the game, as well as 
+the required format of the library.
+
+Library information should not be hardcode, however should instead be ran 
+by forms of input into PDA ZX, then stored into the database we will be 
+using.
