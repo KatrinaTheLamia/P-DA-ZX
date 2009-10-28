@@ -1,0 +1,9 @@
+
+Directory: $PDAZX/Source/Display
+
+Where as the stuff in $PDAZX/Source/Devices/Display are for output only, this 
+directory is more based on handling and manipulating the display data we are 
+using. Handling different graphics formats or in some cases just creating 
+some manner of display output for our target. Nothing really special here 
+though, however.
+

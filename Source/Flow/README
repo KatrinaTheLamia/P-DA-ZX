@@ -1,0 +1,11 @@
+
+Directory $PDAZX/Source/Flow
+
+This directory is designed for items in P*DA ZX that are not specific to one 
+particular area of code. These are mostly constructs that exist all around.
+
+Such as things like Signals and Compatibility functionality.
+
+Generally the only thing in here that should be called directly into your 
+code is widget.h--unless you have good reason to pick and choose.
+

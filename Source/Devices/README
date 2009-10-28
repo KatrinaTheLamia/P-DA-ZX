@@ -1,0 +1,25 @@
+
+Directory: $PDA/Source/Devices
+
+This directory is mostly meant to contain source files denoting information 
+on limitations inherent in the various targets we plan to touch with this 
+toolkit.
+
+Each device will have a few components.
+
+1) Information on what that device can and cannot allow. This is more a lookup
+   Utility of sorts that can be used here.
+
+2) Information to writing to said device. In the case that the target we are 
+   on, somehow has the device accessible, we prolly should know how to talk 
+   to that device.
+
+3) Emulation of the device. If we try to write to the device, and we do not 
+   have access to it--we should at least try to figure out a way to best 
+   output what we want with what we have. Some issues may arise in the case 
+   of running from NDS output to the resources an NES has.
+
+4) Each device's main level item (display.h, input.h, mixer.h network.h) 
+   should be able to be asked if this device is capable of the feature we are 
+   asking about.
+

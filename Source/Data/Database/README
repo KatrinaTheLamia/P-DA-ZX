@@ -1,0 +1,21 @@
+
+Directory $PDAZX/Source/Data/Database
+
+This directory contains information for dealing with Database information.
+
+In the case of SQLite and Kirbybase, the interactions will likely end up 
+being local in nature.
+
+In the case of MySQL and PostgreSQL we will be talking over a network to the 
+database we desire. Since I am generally going to expect a large amount of 
+latency involved, I am going to be working on getting things to operate in a 
+manner that MySQL and PostgreSQL are _very_ light on how they handle their 
+transactions.
+
+I will allow for the option for MySQL and PostgreSQL to forward queries. 
+However, that will be off by default.
+
+Another option that is planned, but off by default, is to allow others to 
+talk to the SQLite and Kirbybase DBs. Still need to consider the security 
+items involved here.
+
