@@ -1,0 +1,10 @@
+
+Directory $PDAZX/Source/Formats/Storage
+
+Yeah--I have a few _slight_ issues with how everybody doing GBA and NDS 
+development seem to suggest using FAT16 or FAT32. Those are horrible file 
+systems. Which is part of why I kind of want to add support for JFS and XFS 
+into what we can use here.
+
+Mostly as this is not only suppose to be something for Modding Pokemon games, 
+but I kind of want this system to be able to make a Pokemon game n,n

@@ -1,0 +1,8 @@
+
+Directory $PDAZX/Formats/Protocols
+
+In this directory goes any form of protocols that we will be making use of in 
+the workings of P*DA ZX. In some cases we will implement this ourself, in 
+others we will simply wrap other libraries and link them into P*DA ZX.
+
+
