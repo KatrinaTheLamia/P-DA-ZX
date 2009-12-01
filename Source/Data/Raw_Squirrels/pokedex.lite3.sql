@@ -269,3 +269,11 @@ create table Location_to_Region (
     Game varchar(2),
 );
 
+create table Ribbon (
+    Name varchar(15),
+    Game varchar(2),
+    Description varchar(100),
+    How_to_get varchar(100)
+);
+
+
