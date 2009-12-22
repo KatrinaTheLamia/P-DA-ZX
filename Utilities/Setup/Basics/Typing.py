@@ -5,7 +5,7 @@ import sqlalchemy as sa
 
 metadata = sa.metadata()
 
-battle_type = sa.Table('battle_type', metadata
+battle_table = sa.Table('battle_type', metadata
 		sa.Column('Name', sa.String),
 		sa.Column('Gen', sa.String),
 		sa.Column('Weak_to', sa.String),
@@ -13,7 +13,12 @@ battle_type = sa.Table('battle_type', metadata
                 sa.Column('Immune_to', sa.String),
 		)
 
-Class Battle_Type(object):
+contest_table = sa.Table('contest_type', metadata
+		sa.Column('Name', sa.String),
+		sa.Column('Do_not_want', sa.String),
+		)
+
+Class Battle(object):
 	def __init__(self, Name, Gen, Weak_to, Resist_to, Immune_to):
 		self.Name = Name
 		self.Gen = Gen
@@ -22,8 +27,25 @@ Class Battle_Type(object):
 		self.Immune_to = Immune_to
 
 	def __repr__(self):
-		return "<Battle_Type('%s', '%s', '%s', '%s', '%s')>" % (self.Name, self.Gen, self.Weak_to, self.Resist_to, self.Immune_to)
+		return "<Battle('%s', '%s', '%s', '%s', '%s')>" % (self.Name, self.Gen, self.Weak_to, self.Resist_to, self.Immune_to)
 
 
-sa.orm.mapper(Battle_Type, battle_type)
+Class Contest(object):
+	def __init__(self, Name, Do_not_want):
+		self.Name = Name
+		self.Do_not_want = Do_not_want
+
+	def __repr__(self):
+		return "<Contest('%s', '%s')>" % (self.Name, self.Do_not_want)
+
+sa.orm.mapper(Battle, battle_table)
+sa.orm.mapper(Contest, contest_table)
+
+def add_engine(engine):
+	metadata.create_all(engine)
+
+
+if __name__ eq '__main__':
+	engine = sa.create_engine('sqlite:///:memory:',echo=True)
+	add_engine(engine)
 
