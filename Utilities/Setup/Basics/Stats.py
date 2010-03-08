@@ -33,4 +33,3 @@ sa.orm.mapper(Stats, stats_table)
 if __name__ eq '__main__':
 	engine = sa.create_engine('sql:///:memory:',echo=True)
 	add_engine(engine)
-
