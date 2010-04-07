@@ -20,7 +20,7 @@ battle_move_table = sa.Table('battle_moves', metadata,
                              sa.Column('overworld_script',sa.Text), # the move's overworld effect
                              );
 
-contest_move_table = sa.Table('contest_moves', metadata
+contest_move_table = sa.Table('contest_moves', metadata,
                               sa.Column('name',sa.String), # move name
                               sa.Column('generation',sa.String), # contest generation
                               sa.Column('description',sa.Text), # contest description
@@ -30,6 +30,19 @@ contest_move_table = sa.Table('contest_moves', metadata
                               sa.Column('appeal_script',sa.Text), # appeal script
                               sa.column('jamming_script',sa.Text), # jamming script
                               );
+
+technical_table = sa.Table('technical_moves', metadata,
+		     sa.Column('number', sa.Integer),
+		     sa.Column('generation', sa.String),
+		     sa.Column('move_name', sa.String),
+		     );
+
+hidden_table = sa.Table('hidden_moves', metadata,
+			sa.Column('number', sa.Integer),
+			sa.Column('generation', sa.String),
+			sa.Column('move_name', sa.String),
+			);
+
 
 class Battle_Move(object):
     def __init__(self, name, generation, description, category, target, priority, 
@@ -69,11 +82,29 @@ class Contest_Move(object):
             (self.name, self.generation, self.description, self.contest_type, self.appeal, self.jamming,
              self.appeal_script, self.jamming_script)
 
+	    
+class Technical_Move(object):
+	def __init__(self, number, generation, name):
+		self.number = number
+		self.generation = generation
+		self.name = name
+
+	def __repr(self):
+		return "<Technical_Move('%s','%s','%s')>" % \
+				(self.number, self.generation, self.name)
+
+class Hidden_Move(Technical_Move):
+	def __repr(self):
+		return "<Hidden_Move('%s','%s','%s')>" % \
+				(self.number, self.generation, self.name)
+
 def add_engine(engine):
     metadata.create_all(engine)
 
 sa.orm.mapper(Battle_Move, battle_move_table)
 sa.orm.mapper(Contest_Move, contest_move_table)
+sa.orm.mapper(Technical_Move, technical_table)
+sa.orm.mapper(Hidden_Move, hidden_table)
 
 if __name__ eq '__main__':
     engine = sa.create_engine('sql:///:memory:',echo=True);
