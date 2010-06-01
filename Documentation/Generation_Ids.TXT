@@ -1,0 +1,69 @@
+
+
+= Generation Ids
+
+Some moves change in power strength and type as generations go on from
+another.
+
+Pokemon also make a few changes of this kind too. Nevermind completely 
+new HM lists in a single generation.
+
+Then in the same generation you get different pokemon appear. Such as 
+Sky Form Shamin and Origin Form Giratina. In some cases, giving them
+entirely new abilities.
+
+So, for these tables, we will have a generation id to note where 
+everything exists. The syntax will consist of
+
+Generation_Number := Generation_Number + Generation_Number | I | V | X | L | X
+
+Game_Name := String
+
+User_Edit := String
+
+Genertaion_Id := Generation_Number + "-" + Game_Name + "-" + User_Edit
+
+This would allow the following to be valid IDs, as well as more:
+
+I-RedGreen-Game_Freak
+I-Yellow-Game_Freak
+I-Stadium-Game_Freak
+I-Glitch-Game_Freak
+I-Pinbal-Game_Freak
+I-HeyYouPikachu-Game_Freak
+I-Fakemon-????
+II-GoldSilver-Game_Freak
+II-Crystal-Game_Freak
+II-Stadium_2-Game_Freak
+III-RubySaphire-Game_Freak
+III-Emerald-Game_Freak
+III-FireRedLeafGreen-Game_Freak
+III-Collesium-Soriety
+III-XD-Soriety
+III-PinballRS-Game_Freak
+III-Mystery_Dungeon-Chun
+III-Pokemon-Box
+III-Pokemon-Channel
+III-Quartz-Baro
+III-Marble-Baro
+IV-DiamondPearl-GameFreak
+IV-Ranger-GameFreak
+IV-PokemonBatleRevolution-Soriety
+IV-Platinum-GameFreak
+IV-ShadowsAlmia-GameFreak
+IV-Explorers-Chun
+IV-ExplorersSky-Chun
+IV-HeartGoldSoulSilver-GameFreak
+IV-Pokewalker2-GameFreak
+IV-ExplorersWii-Chun
+IV-PokemonPark-GameFreak
+
+The idea here, is that a table can be overlaid over the others to add
+functionality to a previous selected generation set. Typically with 
+tables only really replacing necessary entries in the previous ones.
+In a patch type system.
+
+Certain layers can be removed as well.
+
+
+
