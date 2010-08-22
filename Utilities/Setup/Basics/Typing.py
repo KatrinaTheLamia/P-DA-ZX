@@ -15,10 +15,12 @@ battle_table = sa.Table('battle_type', metadata,
 
 contest_table = sa.Table('contest_type', metadata,
 		sa.Column('Name', sa.String),
+                sa.Column('Gen',sa.String),
 		sa.Column('Do_not_want', sa.String),
 		)
 
 egg_table = sa.Table('egg_groups', metadata,
+                     sa.Column('Gen', sa.String),
 		     sa.Column('pokemon', sa.String),
 		     sa.Column('group', sa.String),
 		     );
@@ -36,12 +38,13 @@ Class Battle(object):
 
 
 Class Contest(object):
-	def __init__(self, Name, Do_not_want):
+	def __init__(self, Name, Gen, Do_not_want):
 		self.Name = Name
+                self.Gen = Gen
 		self.Do_not_want = Do_not_want
 
 	def __repr(self):
-		return "<Contest('%s', '%s')>" % (self.Name, self.Do_not_want)
+		return "<Contest('%s','%s','%s')>" % (self.Name, self.Gen, self.Do_not_want)
 
 Class Egg_Groups(object):
 	def __init__(self, pokemon, group):
@@ -49,7 +52,7 @@ Class Egg_Groups(object):
 		self.group = group
 
 	def __repr(self):
-		return "<Egg_Groups('%s','%s')>" % (self.pokemon, self.group)
+		return "<Egg_Groups('%s','%s','%s')>" % (self.pokemon, self.Gen, self.group)
 
 sa.orm.mapper(Battle, battle_table)
 sa.orm.mapper(Contest, contest_table)
